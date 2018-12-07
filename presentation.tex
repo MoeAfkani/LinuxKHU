@@ -173,6 +173,48 @@ As any other thing Linux, you can choose your shell too (by shell I mean the com
 \end{frame}
 
 %------------------------------------------------
+\subsection{\$ echo}
+\begin{frame}
+\frametitle{\$ echo}
+\fcolorbox{black}{gray!20}{\$ echo Hello} \par
+\vspace{0.15cm}
+\fcolorbox{black}{gray!20}{\$ echo Hello \#Comment} \par
+\vspace{0.15cm}
+\fcolorbox{black}{gray!20}{\$ echo -e "Hello \textbackslash n World"}
+\begin{table}
+\begin{tabular}{l l}
+\toprule
+\textbf{Escape sequence Function} & \textbf{}\\
+\midrule
+\textbackslash a & Alert (bell) \\
+\textbackslash b & Backspace \\
+\textbackslash f & Form feed \\
+\textbackslash n & New line \\
+\textbackslash r & Carriage return \\
+\textbackslash t & Horizontal tab \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}\frametitle{\$ echo}
+{\bf metacharacters and Control operators}\\
+Also there are characters with special meaning. You need to escape then if you need them in your commands:\\
+$|$ \& ; $($ $)$ $<$ $>$ $*$ \\
+There is also control operators. They also have special meanings:\\
+$||$ \&\& \& ; ;; $|$ $($ $)$ \\
+The most important ones are ; (do one by one), \&\& (logical and) and $||$ (logical or). 
+\end{frame}
+
+\begin{frame}\frametitle{\$ echo}
+\fcolorbox{black}{gray!20}{\$ echo line 1 ; echo line 2 ; echo line 3} \par
+\vspace{0.15cm}
+\fcolorbox{black}{gray!20}{\$ echo line 1 \&\&echo line 2 \&\& echo line 3} \par
+\vspace{0.15cm}
+\fcolorbox{black}{gray!20}{\$ echo line 1 $||$ echo line 2 ; echo line 3}
+\end{frame}
+
+
 \begin{frame}
 \frametitle{Bullet Points}
 \begin{itemize}
